@@ -19,7 +19,7 @@ public class Introduction  implements rca.ac.rw.interfaces.Introduction {
 
         for (int i =0; i < actions.size(); i++){
             int number = i+1;
-            System.out.println(number + " " + actions.get(i));
+            System.out.println(number + " " + actions.get(i ));
         }
 
         System.out.println("\n Please enter the number of the action you want to perform: ");
