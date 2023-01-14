@@ -28,9 +28,24 @@ public class Functionality implements rca.ac.rw.interfaces.Functionality {
 
     public void addUser(){
         try {
+            Scanner scanner = new Scanner(System.in);
+            ArrayList<String> field = new ArrayList<String>();
             FileWriter fileWriter = new FileWriter("./users.txt");
             System.out.println("Okay welcome to the user addition!! ");
-            System.out.println("Please fill out the following data ro save a user");
+            System.out.println("Please fill out the following data to save a user");
+            String fields[] = {"id" , "firstName" , "secondName" , "age" ,"email" , "telephone" , "fatherName" , "motherName"};
+           for (int i=0; i < fields.length; i++){
+               System.out.println(fields[i] + ": ");
+               String input = scanner.nextLine();
+               field.add(input);
+           }
+
+           fileWriter.write("\t\tNew User");
+            for (int i = 0; i < field.size(); i++) {
+               fileWriter.write("User Data: " + field.get(i) + "\n");
+            }
+            fileWriter.write(" ");
+            fileWriter.close();
 
         }catch (IOException e){
             System.out.println("The file does not exist");

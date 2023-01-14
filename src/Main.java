@@ -13,6 +13,7 @@ public class Main {
         String action = introduction.introduction();
 
         Functionality functionality = new Functionality(1);
+        functionality.addUser();
         functionality.getUsers();
     }
 }
