@@ -1,6 +1,7 @@
 package rca.ac.rw.classess;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -23,5 +24,17 @@ public class Functionality implements rca.ac.rw.interfaces.Functionality {
        }catch (IOException e){
            System.out.println("The file was not found");
        }
+    }
+
+    public void addUser(){
+        try {
+            FileWriter fileWriter = new FileWriter("./users.txt");
+            System.out.println("Okay welcome to the user addition!! ");
+            System.out.println("Please fill out the following data ro save a user");
+
+        }catch (IOException e){
+            System.out.println("The file does not exist");
+        }
+
     }
 }
